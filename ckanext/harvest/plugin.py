@@ -12,6 +12,7 @@ import ckan.plugins as p
 from ckan.lib.plugins import DefaultDatasetForm
 
 from ckan.lib.plugins import DefaultTranslation
+from ckan.common import _
 
 import ckanext.harvest
 from ckanext.harvest import cli, views
@@ -323,8 +324,8 @@ class Harvest(p.SingletonPlugin, DefaultDatasetForm, DefaultTranslation):
         if package_type != 'harvest':
             return facets_dict
 
-        return OrderedDict([('frequency', 'Frequency'),
-                            ('source_type', 'Type'),
+        return OrderedDict([('frequency', _('Frequency')),
+                            ('source_type', _('Type')),
                             ])
 
     def organization_facets(self, facets_dict, organization_type, package_type):
@@ -332,8 +333,8 @@ class Harvest(p.SingletonPlugin, DefaultDatasetForm, DefaultTranslation):
         if package_type != 'harvest':
             return facets_dict
 
-        return OrderedDict([('frequency', 'Frequency'),
-                            ('source_type', 'Type'),
+        return OrderedDict([('frequency', _('Frequency')),
+                            ('source_type', _('Type')),
                             ])
 
 

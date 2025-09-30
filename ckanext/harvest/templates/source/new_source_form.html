@@ -26,7 +26,7 @@
   {{ form.markdown('notes', id='field-notes', label=_('Description'), value=data.notes, error=errors.notes) }}
 
   <div class="harvest-types form-group control-group">
-    <label class="control-label">Source type</label>
+    <label class="control-label"> {% trans %} Source type {% endtrans %}</label>
     <div class="controls">
       {% for harvester in h.harvesters_info() %}
         {% set checked = False %}
@@ -70,7 +70,7 @@
           {% for organization in organizations_available %}
             {# get out first org from users list only if there is not an existing org #}
             {% set selected_org = (existing_org and existing_org == organization.id) or (not existing_org and not data.id and organization.id == organizations_available[0].id) %}
-            <option value="{{ organization.id }}" {% if selected_org %} selected="selected" {% endif %}>{{ organization.name }}</option>
+            <option value="{{ organization.id }}" {% if selected_org %} selected="selected" {% endif %}>{{ organization.title }}</option>
           {% endfor %}
         </select>
       </div>
@@ -115,7 +115,7 @@
       {% endif %}
     {% endblock %}
 
-    <input id="save" name="save" value="Save" type="submit" class="btn btn-primary pull-right">
+    <input id="save" name="save" value="{{ _('Save') }}" type="submit" class="btn btn-primary pull-right">
   </p>
 
 </form>

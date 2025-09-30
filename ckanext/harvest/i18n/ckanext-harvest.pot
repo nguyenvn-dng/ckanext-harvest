@@ -561,3 +561,15 @@ msgstr ""
 msgid "Local content"
 msgstr ""
 
+#: ckanext/harvest/plugin.py:330
+msgid "Frequency"
+msgstr ""
+
+#: ckanext/harvest/plugin.py:331
+msgid "Type"
+msgstr ""
+
+#: ckanext/harvest/templates/source/new_source_form.html:118
+msgid "Save"
+msgstr ""
+

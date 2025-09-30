@@ -352,16 +352,8 @@ msgid "Harvest sources"
 msgstr "Nguồn thu thập"
 
 #: ckanext/harvest/templates/source/new.html:26
-msgid ""
-" Harvest sources allow importing remote metadata into this catalog. "
-"Remote sources can be other catalogs such as other CKAN instances, CSW "
-"servers or Web Accessible Folders (WAF) (depending on the actual "
-"harvesters enabled for this instance). "
-msgstr ""
-"Nguồn thu thập cho phép nhập siêu dữ liệu từ xa vào danh mục này. "
-"Nguồn từ xa có thể là các danh mục khác như các phiên bản CKAN khác, máy chủ CSW "
-"hoặc Thư mục Truy cập Web (WAF) (tùy thuộc vào các bộ thu thập thực tế "
-"được kích hoạt cho phiên bản này). "
+msgid "Harvest sources allow importing remote metadata into this catalog. Remote sources can be other catalogs such as other CKAN instances, CSW servers or Web Accessible Folders (WAF) (depending on the actual harvesters enabled for this instance)."
+msgstr "Nguồn thu thập cho phép nhập siêu dữ liệu từ xa vào danh mục này. Nguồn từ xa có thể là các danh mục khác như các phiên bản CKAN khác, máy chủ CSW hoặc Thư mục Truy cập Web (WAF) (tùy thuộc vào các bộ thu thập thực tế)."
 
 #: ckanext/harvest/templates/source/new_source_form.html:8
 msgid "URL"
@@ -394,6 +386,27 @@ msgstr "Mô tả"
 #: ckanext/harvest/templates/source/new_source_form.html:43
 msgid "Update frequency"
 msgstr "Tần suất cập nhật"
+
+msgid "Manual"
+msgstr "Thủ công"
+
+msgid "Monthly"
+msgstr "Hàng tháng"
+
+msgid "Weekly"
+msgstr "Hàng tuần"
+
+msgid "Biweekly"
+msgstr "Hai lần một tuần"
+
+msgid "Daily"
+msgstr "Hàng ngày"
+
+msgid "Always"
+msgstr "Liên tục"
+
+msgid "Source type"
+msgstr "Loại nguồn"
 
 #: ckanext/harvest/templates/source/new_source_form.html:46
 msgid "Configuration"
@@ -592,4 +605,19 @@ msgstr "Nội dung cục bộ"
 
 #~ msgid "Refresh requested, harvesting will take place within 15 minutes."
 #~ msgstr "Đã yêu cầu làm mới, việc thu thập sẽ diễn ra trong vòng 15 phút."
+
+#: ckanext/harvest/plugin.py:330
+msgid "Frequency"
+msgstr "Tần suất"
+
+#: ckanext/harvest/plugin.py:331
+msgid "Type"
+msgstr "Loại"
+
+#: ckanext/harvest/templates/source/new_source_form.html:118
+msgid "Save"
+msgstr "Lưu"
+
+msgid "Harvest"
+msgstr "Thu thập dữ liệu"
 
