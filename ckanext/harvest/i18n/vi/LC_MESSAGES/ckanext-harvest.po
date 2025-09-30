@@ -218,6 +218,11 @@ msgid "{number} harvest source found"
 msgid_plural "{number} harvest sources found"
 msgstr[0] "Tìm thấy {number} nguồn thu thập"
 
+#: ckanext/harvest/templates/snippets/search_result_text.html:6
+msgid "{number} harvest found"
+msgid_plural "{number} harvests found"
+msgstr[0] "Tìm thấy {number} nguồn thu thập"
+
 #: ckanext/harvest/templates/snippets/search_result_text.html:7
 #: ckanext/harvest/templates/source/org_source_list.html:25
 msgid "Sorry no harvest sources found"
