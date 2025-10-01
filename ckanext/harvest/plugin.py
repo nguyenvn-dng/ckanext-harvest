@@ -39,6 +39,7 @@ class Harvest(p.SingletonPlugin, DefaultDatasetForm, DefaultTranslation):
     p.implements(p.ITemplateHelpers)
     p.implements(p.IFacets, inherit=True)
     p.implements(p.ITranslation, inherit=True)
+    
 
     startup = False
 
@@ -336,6 +337,37 @@ class Harvest(p.SingletonPlugin, DefaultDatasetForm, DefaultTranslation):
         return OrderedDict([('frequency', _('Frequency')),
                             ('source_type', _('Type')),
                             ])
+
+    # IConfigDeclaration
+
+    def declare_config_options(self, declaration, key):
+        declaration.declare(key.ckan.harvest.mq.type, 'redis').set_description(
+            'Message queue backend type: redis or amqp'
+        )
+        declaration.declare(key.ckan.harvest.mq.hostname, 'localhost').set_description(
+            'Message queue hostname'
+        )
+        declaration.declare(key.ckan.harvest.mq.port, 6379).set_description(
+            'Message queue port (Redis: 6379, RabbitMQ: 5672)'
+        )
+        declaration.declare(key.ckan.harvest.mq.redis_db, 0).set_description(
+            'Redis database number (Redis only)'
+        )
+        declaration.declare(key.ckan.harvest.mq.password, '').set_description(
+            'Message queue password'
+        )
+        declaration.declare(key.ckan.harvest.mq.user_id, 'guest').set_description(
+            'Message queue user ID (RabbitMQ only)'
+        )
+        declaration.declare(key.ckan.harvest.mq.virtual_host, '/').set_description(
+            'Message queue virtual host (RabbitMQ only)'
+        )
+        declaration.declare(key.ckan.harvest.not_overwrite_fields, []).set_description(
+            'List of fields that should not be overwritten during harvest'
+        )
+        declaration.declare(key.ckan.harvest.default_dataset_name_append, 'number-sequence').set_description(
+            'Default method for appending to dataset names: number-sequence or random-hex'
+        )
 
 
 def _get_logic_functions(module_root, logic_functions={}):
