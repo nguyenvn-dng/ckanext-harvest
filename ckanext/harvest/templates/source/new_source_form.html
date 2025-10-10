@@ -6,6 +6,17 @@
 
   {% block errors %}{{ form.errors(error_summary) }}{% endblock %}
 
+  {% block title %}
+  <h1 class="page-heading">
+    {% if data.get('id', None) and h.check_access('harvest_source_delete', {'id': data.id}) and not data.get('state', 'none') == 'deleted' %}
+      {{ _('Edit harvest source') }}
+    {% else %}
+      {{ _('Create Harvest Source') }}
+    {% endif %}
+  </h1>
+{% endblock %}
+
+
   {% call form.input('url', id='field-url', label=_('URL'), value=data.url, error=errors.url, classes=['control-full', 'control-large']) %}
       <span class="info-block">
         {{ _('This should include the http:// part of the URL') }}
