@@ -25,7 +25,7 @@
 
   {{ h.csrf_input() if 'csrf_input' in h }}
 
-  {{ form.input('title', id='field-title', label=_('Title'), placeholder=_('eg. A descriptive title'), value=data.title, error=errors.title, classes=['control-full'], attrs={'data-module': 'slug-preview-target'}) }}
+  {{ form.input('title', id='field-title', label=_('Title'), placeholder=_('eg. A descriptive title'), value=data.title, error=errors.title, classes=['control-full'], attrs={'data-module': 'slug-preview-target','class': 'form-control form-control-custom'}) }}
 
   {% set prefix = 'harvest' %}
   {% set domain = h.url_for('{0}.read'.format(c.dataset_type), id='', qualified=true) %}
@@ -126,7 +126,7 @@
       {% endif %}
     {% endblock %}
 
-    <input id="save" name="save" value="{{ _('Save') }}" type="submit" class="btn btn-primary pull-right">
+    <input id="save" name="save" value="{{ _('Save') }}" type="submit" class="btn btn-primary btn-primary-custom pull-right">
   </p>
 
 </form>
