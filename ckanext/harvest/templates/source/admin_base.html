@@ -30,7 +30,7 @@
          title="{{ _('Delete all harvest jobs and existing datasets from this source') }}">
         {{ _('Clear') }}
       </a>
-       <a href="{{ h.url_for('{0}.read'.format(c.dataset_type), id=harvest_source.id) }}" class="btn btn-default btn-default-custom">
+       <a href="{{ h.url_for('{0}.read'.format(c.dataset_type), id=harvest_source.id) }}" class="btn btn-primary btn-primary-custom">
         <i class="fa fa-eye eye-open"></i>
         {{ _('View harvest source') }}
       </a>

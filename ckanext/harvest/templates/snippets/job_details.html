@@ -16,7 +16,7 @@ Example:
 {% set stats = job.stats %}
 
 {% if job.status == 'Finished' %}
-  <p>
+  <p style="display: flex; gap: 4px;">
     <span class="label label-important" data-diff="error">
       {% if 'errored' in stats and stats['errored'] > 0 %}
         {{ stats['errored'] }}

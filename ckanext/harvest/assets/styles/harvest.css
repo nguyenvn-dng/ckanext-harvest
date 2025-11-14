@@ -10,6 +10,8 @@ header.with-filter h1 {
   background-color: #DDD;
   text-shadow: none;
   font-weight: normal;
+  padding: 2px 8px;
+  border-radius: 3px;
 }
 [data-diff="error"] {
   background-color: #b55457;

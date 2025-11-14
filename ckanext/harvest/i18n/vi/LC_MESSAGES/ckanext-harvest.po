@@ -166,6 +166,18 @@ msgstr "Thêm Nguồn Thu thập"
 msgid "errors"
 msgstr "lỗi"
 
+msgid "added"
+msgstr "đã thêm"
+
+msgid "updated"
+msgstr "đã cập nhật"
+
+msgid "deleted"
+msgstr "đã xóa"
+
+msgid "not modified"
+msgstr "không thay đổi"
+
 #: ckanext/harvest/templates/snippets/job_details.html:41
 msgid "Details"
 msgstr "Chi tiết"
