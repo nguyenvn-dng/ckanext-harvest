@@ -110,7 +110,7 @@
       {{ _('Delete') }}
       <span class="caret"></span>
     </a>
-    <ul class="dropdown-menu">
+    <ul class="dropdown-menu" style="padding: 0.5rem; min-width: max-content;">
       <li>
         <a href="{% url_for 'harvest_delete', id=data.name %}" data-module="confirm-action" data-module-i18n="{{ locale_delete }}">
           {{ _('Delete source') }}
